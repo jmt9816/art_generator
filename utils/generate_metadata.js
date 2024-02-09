@@ -51,7 +51,7 @@ const loadImgData = async (_imgObject) => {
       loadedImage: image,
     };
   } catch (error) {
-    console.error("Error loading image:", error);
+    console.error("Error loading image:", error.stack);
   }
 };
 

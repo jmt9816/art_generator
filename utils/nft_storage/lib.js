@@ -1,4 +1,4 @@
-const { NFTStorage } = require("nft.storage");
+// const { NFTStorage } = require("nft.storage");
 const { filesFromPath } = require("files-from-path");
 const path = require("path");
 const get = require("lodash.get");
@@ -25,13 +25,13 @@ module.exports = async function library({ basePath, token }) {
   const imagesPath = path.resolve(basePath, `images`);
 
   const files = filesFromPath(imagesPath, {
-    pathPrefix: path.resolve(imagesPath), 
-    hidden: true, 
+    pathPrefix: path.resolve(imagesPath),
+    hidden: true,
   });
 
   const uploadFiles = filesFromPath(imagesPath, {
-    pathPrefix: path.resolve(imagesPath), 
-    hidden: true, 
+    pathPrefix: path.resolve(imagesPath),
+    hidden: true,
   });
 
   const fileSizes = [];
@@ -43,7 +43,7 @@ module.exports = async function library({ basePath, token }) {
   const totalUpload = fileSizes.reduce((a, b) => a + b);
   const averageUpload = totalUpload / fileSizes.length;
 
-  const storage = new NFTStorage({ token });
+  // const storage = new NFTStorage({ token });
 
   console.table([
     {
@@ -57,9 +57,9 @@ module.exports = async function library({ basePath, token }) {
   );
 
   console.log("\n");
-  const cid = await storage.storeDirectory(files);
+  // const cid = await storage.storeDirectory(files);
 
-  console.log(`Images uploaded with cid: ${cid}`);
+  console.log(`Images uploaded with :`);
 
   const metadataPath = path.resolve(basePath, `json`);
   const masterPath = path.resolve(metadataPath, "_metadata.json");
@@ -90,7 +90,7 @@ module.exports = async function library({ basePath, token }) {
   const jsonPath = path.resolve(basePath, `json`);
   const metadataStreams = filesFromPath(jsonPath, {
     ignore: ["_metadata.json"],
-    pathPrefix: path.resolve(jsonPath), 
+    pathPrefix: path.resolve(jsonPath),
     hidden: true,
   });
 

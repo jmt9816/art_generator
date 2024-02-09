@@ -27,12 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.11.2",
-    "dotenv": "^16.0.1",
-    "files-from-path": "^0.2.6",
-    "gif-encoder-2": "^1.0.5",
-    "inquirer": "^8.2.4",
-    "lodash.get": "^4.4.2",
-    "nft.storage": "^6.3.0",
+    "gif-encoder-2": "^1.0.0",
     "sha1": "^1.1.1"
   }
 }

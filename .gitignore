@@ -148,3 +148,6 @@ dist
 # Ignore
 yarn.lock
 package-lock.json
+
+layers
+*.png

@@ -4,36 +4,36 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 
 const network = NETWORK.sol;
 
-// General metadata for Ethereum
-const namePrefix = "Toridachi Steeze";
+// General metadata 
+const namePrefix = "n00bs";
 const description =
-  "Note to toast: dont forget to replace this description with something cool";
-const baseUri = "ipfs://NewUriToReplace";
+  "n00bs bring the iconic heroes and lore from ReBoot Worlds into diversely curated, pixelated PFPs.";
+
+const baseUri = "onlyusethisforethereum";
 
 const solanaMetadata = {
-  symbol: "TS",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: null,
+  symbol: "n00b",
+  seller_fee_basis_points: 600, // Define how much % you want from secondary market sales 1000 = 10%
+  external_url: "https://rebootworlds.com/",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "4wFD3TewF28RjZNpVk6T1pXWufLpTUMnAJN2ZXwKC8uf",
       share: 100,
     },
   ],
 };
 
-// If you have selected Solana then the collection starts from 0 automatically
+// layer order matters, first layer is in the back, last later is in the front (on "top")
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5000,
+    growEditionSizeTo: 2000,
     layersOrder: [
+      { name: "Sky" },
       { name: "Background" },
-      { name: "Body Main" },
+      { name: "Species" },
+      { name: "Expression" },
       { name: "Clothing" },
-      { name: "Body Accent" },
-      { name: "Eyes" },
-      { name: "Hat" },
-      { name: "Mouth" },
+      { name: "Head" },
     ],
   },
 ];
