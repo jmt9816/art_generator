@@ -150,4 +150,9 @@ yarn.lock
 package-lock.json
 
 layers
+layers/*
+layers/*.png
 *.png
+
+build.zip
+

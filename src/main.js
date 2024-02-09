@@ -430,7 +430,7 @@ const startCreating = async () => {
         abstractedIndexes.shift();
       } else {
         console.log("DNA exists or combination is excluded.");
-        console.log(results);
+
         failedCount++;
         if (failedCount >= uniqueDnaTorrance) {
           console.log(
